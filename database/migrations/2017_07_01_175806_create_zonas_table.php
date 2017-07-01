@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProcentajesTable extends Migration
+class CreateZonasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateProcentajesTable extends Migration
      */
     public function up()
     {
-        Schema::create('procentajes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('agencias');
-            $table->integer('publico');
+        Schema::create('zonas', function (Blueprint $table){
+            $table->increments('IdZona');
+            $table->string('NombreZona');
+            $table->integer('IdDestino');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateProcentajesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('procentajes');
+        Schema::drop('zonas');
     }
 }
