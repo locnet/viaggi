@@ -17,8 +17,8 @@ class CreateHotelesTable extends Migration
             $table->integer('hotel_id');
             $table->string('nombre_hotel');
             $table->string('categoria');
-            $table->foreign('zona_id')->references('IdZona')->on('zonas');
-            $table->foreign('destino_id')->references('IdDestino')->on('destinos');
+            $table->integer('IdZona');
+            $table->integer('IdDestino');
             $table->timestamps();
         });
     }

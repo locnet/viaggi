@@ -213,8 +213,7 @@ reserva de hotel en Andalucia.')
                         <div class="col-md-12 pull-down">
                             <div class="col-md-7 col-xs-7">                            
                                 <h4 class="lato-200 text-primary"><strong>
-                                    {{ $procent->makeHotelPrice(
-                                            $procent,
+                                    {{ $procent->makeHotelPrice(                                            
                                             $hotelData->BOARD['pvp_type'],
                                             $hotelData->BOARD->ROOM['min_price'],
                                             $hotelData->BOARD->ROOM['min_price_pvp'])
@@ -507,8 +506,7 @@ reserva de hotel en Andalucia.')
         
         {!!        
         'hotelObj["hotel_' . $h . '"] = {   categoria : ' .$category . ',
-                                        precio : "'.$procent->makeHotelPrice(
-                                                    $procent,
+                                        precio : "'.$procent->makeHotelPrice(                                                    
                                                     $hotelData->BOARD['pvp_type'],
                                                     $hotelData->BOARD->ROOM['min_price'],
                                                     $hotelData->BOARD->ROOM['min_price_pvp']).'",

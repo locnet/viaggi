@@ -50,6 +50,7 @@ class ProcentController extends Controller
         // si la validacion falla Laravel intenta redirecionar a la direccion anterior
         // pero  la direccion anterior es admin/procentajes/editar/{id} que espera un
         // metodo POST, sin embargo Laravel manda una peticion GET
+        // asi que redireccionamos, con errores, al pagia principal de procentajes
         if ($validation->fails()) {
             return redirect('admin/procentajes')->withErrors($validation->errors());
         }

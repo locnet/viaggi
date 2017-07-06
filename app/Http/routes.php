@@ -130,7 +130,16 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 
 	// Ofertas
 	Route::get('/admin/ofertas','Admin\OfertasController@index');
-	
+
+	Route::get('/admin/ofertas/nueva','Admin\OfertasController@create');
+
+	Route::post('/admin/ofertas/guardar','Admin\OfertasController@store');
+
+	Route::get('/admin/ofertas/borrar/{id}','Admin\OfertasController@destroy');
+
+	Route::get('/admin/ofertas/editar/{id}','Admin\OfertasController@edit');
+
+	Route::post('/admin/ofertas/update/{id}','Admin\OfertasController@update');
 	// Agencias
 	Route::get('/admin/agencias','Admin\AgenciasController@index');
 	Route::get('/admin/agencia/{id}','Admin\AgenciasController@show');

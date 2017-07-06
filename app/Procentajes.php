@@ -14,26 +14,15 @@ class Procentajes extends Model
      *
      * @return $price
      */
-    public function makeHotelPrice(Procentajes $procentajes, 
-    	                          $priceType, $hotelPrice, $hotelPvpPrice) {
+    public function makeHotelPrice($priceType, $hotelPrice, $hotelPvpPrice) {
 
-        $procent = $procentajes->all()->first();
+        $procent = $this->all()->first();
         
         $agSession = Session::has('agency');
-        $agencia = $procent['agencia'];
-        $publico = $procent['publico'];
+        $agencia = ($procent['agencia'] + 100) / 100;
+        $publico = ($procent['publico'] + 100) / 100;
         $precio = 0;
-        if (strlen($agencia == 1)){
-            $agencia = "1.0".$agencia;
-        } else {
-            $agencia = "1.".$agencia;
-        }
-
-        if (strlen($publico == 1)){
-            $publico = "1.0".$publico;
-        } else {
-            $publico = "1.".$publico;
-        }
+        
 
         if (strlen($priceType) == 0) {
             $priceType = "R";

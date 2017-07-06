@@ -188,7 +188,6 @@ y particulares. Los mejores precios para hacer tours de Andalucia.')
                                     $hotelPrice += $acom['price'];
                                     $hotelPvpPrice += $acom['price_pvp'];
                                     $roomPrice = $procent->makeHotelPrice(
-                                                    $procent,
                                                     $priceType,
                                                     $acom['price'],
                                                     $acom['price_pvp']

@@ -43,10 +43,17 @@
 		                            </ul>
 					            </li>
 					            <li @yield('ofertas')>
-					            	<a href="{{ url('/admin/ofertas') }}" >
-						            	<span class="fa fa-money"></span>Ofertas
-						            </a>
-						        </li>
+					            	<a href="" class="dropdown-toggle" 
+					            	    data-toggle="dropdown">
+					            	    <span class="fa fa-money"></span>
+					            	    Ofertas<span class="caret"></span>
+					            	</a>
+		                            <ul class="dropdown-menu">
+		                            	<li @yield('ofertas_all')><a href="{{ url('/admin/ofertas') }}">Todas</a></li>
+		                            	<li @yield('ofertas')><a href="{{ url('/admin/ofertas/nueva') }}">Nueva</a></li>
+		                            </ul>
+					            </li>
+					            
 					            <li @yield('destinos')>
 					            	<a href="{{ url('/admin/destinos') }}" class="dropdown-toggle" 
 					            	    data-toggle="dropdown">

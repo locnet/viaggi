@@ -82,14 +82,14 @@
                     <div class="col-md-4 col-sm-6 col-xs-6">  
                         <div class="tour-row">
                             <a href="#">                  
-                                <img alt="$tour->tituloOfertas" class="img-tour"
-                                     src="{{ asset('admin/images/'.$oferta->fotoOfertas) }}" />
+                                <img alt="$tour->titulo" class="img-tour"
+                                     src="{{ asset('admin/images/'.$oferta->foto) }}" />
                             </a>
                             <div class="tour-info">
                                 <div class="row">
                                     <div class="col-md-8 col-xs-8">
                                         <h4 class="roboto-400 dark-grey">
-                                            {{ ucfirst($oferta->tituloOfertas) }}
+                                            {{ ucfirst($oferta->titulo) }}
                                         </h4>
                                         <p class="small roboto">
                                             <i class="fa fa-calendar-check-o"></i>
@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-4">
                                         <h3 class="roboto-700 dark-blue">
-                                            {{ $oferta->getOferPrice($oferta->precioPublico,$oferta->precioOfertas) }} 
+                                            {{ $oferta->getOferPrice($oferta->precio_publico,$oferta->precio_agencias) }} 
                                         </h3>
                                     </div>
                                 </div>
