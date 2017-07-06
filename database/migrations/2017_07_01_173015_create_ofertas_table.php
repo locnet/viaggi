@@ -22,8 +22,8 @@ class CreateOfertasTable extends Migration
             $table->decimal('precio_publico');
             $table->string('alojamiento');
             $table->integer('hotel_id');
-            $table->timestamp('start');
-            $table->timestamp('fin');
+            $table->varchar('start');
+            $table->varchar('fin');
             $table->string('idioma');
             $table->timestamps();
         });

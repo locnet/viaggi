@@ -103,9 +103,13 @@ class OfertasController extends Controller
             }
             
             if ( Ofertas::firstOrCreate($query )) {
-                return "yuuupi";
+                return view('admin.ofertas.success_message')
+                    ->with('success',true)
+                    ->with('message'," creada ");
             } else {
-                return "error";
+                return view('admin.ofertas.success_message')
+                    ->with('success',false)
+                    ->with('message'," creada ");
             }
         }
     }
