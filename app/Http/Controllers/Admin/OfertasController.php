@@ -198,9 +198,13 @@ class OfertasController extends Controller
 
             // actualizamos
             if ($oferta->update($query)) {
-                return redirect('admin/ofertas');
+                 return view('admin.ofertas.success_message')
+                    ->with('success',true)
+                    ->with('message'," actualizada ");
             } else {
-                return "Error";
+                return view('admin.ofertas.success_message')
+                    ->with('success',false)
+                    ->with('message'," actualizada ");
             }
     }
 
