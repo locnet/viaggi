@@ -17,8 +17,7 @@
                         <div class="tour-info">
                             <div class="row">
                                 <div class="col-md-6 col-xs-6 text-center">
-                                    <h3 class="roboto-700 blue" style="margin: -50px 0px 0px 0px;
-                                        padding-left: 10px; background-color: #ffffff">
+                                    <h3 class="roboto-700 blue price">
                                         <strong>{{ $tour->getTourPrice($tour->precio) }}</strong>
                                     </h3>
                                 </div>                                    
