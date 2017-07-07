@@ -9,7 +9,7 @@
             <h3 class="roboto-extra-big yellow text-center">¿Y tu?</h3>
         </div>
     </section>
-    <section class="tours-container">
+    <section class="oferts-container">
         <div class="container">
             <div class="col-md-12 col-lg-12 col-xs-12">
                 <div class="row">
@@ -21,10 +21,16 @@
                             <a href="{{ url('tour/'.$tour->id) }}">
                                 <img class="img-tour" alt="{{ ucfirst($tour->titulo) }}"
                                     src="{{ asset('admin/images/'.$tour->foto) }}" /> 
-                                </a>
+                            </a>
                             <div class="tour-info">
                                 <div class="row">
-                                    <div class="col-md-8 col-xs-8">
+                                    <div class="col-md-6 col-xs-6 text-center">
+                                        <h3 class="roboto-700 blue" style="margin: -50px 0px 0px 0px;
+                                            padding-left: 10px; background-color: #ffffff">
+                                            <strong>{{ $tour->getTourPrice($tour->precio) }}</strong>
+                                        </h3>
+                                    </div>                                    
+                                    <div class="col-md-12 col-xs-12">
                                         <h4 class="roboto-400 dark-grey">
                                                 {{ ucfirst($tour->titulo) }}
                                             </a>
@@ -33,12 +39,8 @@
                                             <i class="fa fa-calendar-check-o"></i>
                                             {{ $tour->start . ' al '. $tour->fin }}
                                         </small></p>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h3 class="dark-blue">
-                                            <strong>{{ $tour->getTourPrice($tour->precio) }}</strong>
-                                        </h3>
-                                    </div>
+                                    </div>                                        
+                                    
                                 </div>
                             </div>
                         </div>                       
@@ -79,7 +81,7 @@
                     <h1 class="lato-300 text-center white">Nuestras ultimas ofertas en hoteles </h1>
                 </div>
                 @foreach($ofertas as $oferta)
-                    <div class="col-md-4 col-sm-6 col-xs-6">  
+                    <div class="col-md-4 col-sm-6 col-xs-12">  
                         <div class="tour-row">
                             <a href="#">                  
                                 <img alt="$tour->titulo" class="img-tour"
@@ -87,7 +89,13 @@
                             </a>
                             <div class="tour-info">
                                 <div class="row">
-                                    <div class="col-md-8 col-xs-8">
+                                    <div class="col-md-6 col-xs-6 text-center">
+                                        <h3 class="roboto-700 blue" style="margin: -50px 0px 0px 0px;
+                                        padding-left: 10px; background-color: #ffffff">
+                                            {{ $oferta->getOferPrice($oferta->precio_publico,$oferta->precio_agencias) }} 
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-12 col-xs-12">
                                         <h4 class="roboto-400 dark-grey">
                                             {{ ucfirst($oferta->titulo) }}
                                         </h4>
@@ -96,11 +104,7 @@
                                             {{ $oferta->start . " al ".$oferta->fin }}
                                         </p>
                                     </div>
-                                    <div class="col-md-4 col-xs-4">
-                                        <h3 class="roboto-700 dark-blue">
-                                            {{ $oferta->getOferPrice($oferta->precio_publico,$oferta->precio_agencias) }} 
-                                        </h3>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>                                            

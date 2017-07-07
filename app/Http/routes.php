@@ -105,41 +105,29 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 
 	// Destinos
 	Route::get('/admin/destinos','Admin\DestinosController@index');
-
 	Route::get('/admin/ver/hotel/{id}','Admin\HotelSearchController@getHotelDetails');
-
 	Route::get('/admin/destinos/todos','Admin\DestinosController@viewAllDestinations');
-
 	Route::get('/admin/destinos/nuevo/{id}/{destino}','Admin\DestinosController@store');
-
 	Route::get('/admin/destinos/borrar/{id}', 'Admin\DestinosController@destroy');
 
 	// Zonas 
 	Route::get('/admin/zonas','Admin\ZonasController@index');
-
     Route::get('/admin/destino/{id}/zonas', 'Admin\ZonasController@getZones');
-
     Route::get('/admin/zonas/nueva/{iddestino}/{idzona}/{nombrezona}', 'Admin\ZonasController@store');
-
     Route::get('/admin/zonas/borrar/{id}', 'Admin\ZonasController@destroy');
     
 	// Procentajes
 	Route::get('/admin/procentajes','Admin\ProcentController@index');
-
 	Route::post('/admin/procentajes/editar/{id}','Admin\ProcentController@update');
 
 	// Ofertas
 	Route::get('/admin/ofertas','Admin\OfertasController@index');
-
 	Route::get('/admin/ofertas/nueva','Admin\OfertasController@create');
-
 	Route::post('/admin/ofertas/guardar','Admin\OfertasController@store');
-
 	Route::get('/admin/ofertas/borrar/{id}','Admin\OfertasController@destroy');
-
 	Route::get('/admin/ofertas/editar/{id}','Admin\OfertasController@edit');
-
 	Route::post('/admin/ofertas/update/{id}','Admin\OfertasController@update');
+
 	// Agencias
 	Route::get('/admin/agencias','Admin\AgenciasController@index');
 	Route::get('/admin/agencia/{id}','Admin\AgenciasController@show');
