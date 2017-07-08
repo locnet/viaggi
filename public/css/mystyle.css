@@ -190,6 +190,7 @@ li.active {
 }
 .oferts-container {
 	background: url(../images/hojas.jpg) no-repeat top center;
+	background-color: #5f93cc;
 	padding-bottom:60px;
 }
 .tour-row{
