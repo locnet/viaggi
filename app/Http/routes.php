@@ -3,6 +3,7 @@
 /* RUTAS PARA TESTING */
 Route::get('test','Test@hotel_category');
 Route::get('landing','Landing@index');
+Route::get('mail','Tests\MailController@index');
 
 /*
 |--------------------------------------------------------------|
@@ -74,6 +75,10 @@ Route::get('facebook/callback', 'Auth\SocialLogin@facebook_callback');
 
 Route::get('login/google', 'Auth\SocialLogin@google');
 Route::get('google/callback','Auth\SocialLogin@google_callback');
+
+// Registro/autentificacion agencias
+Route::get('agencia','Auth\AgencyController@index');
+
 /*
 |-----------------------------------------------------------------
 | ADMINISTRACION
@@ -81,23 +86,16 @@ Route::get('google/callback','Auth\SocialLogin@google_callback');
 */
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function() {
 	Route::get('/admin','Admin\MainController@index');
+
 	// Tours
 	Route::get('/admin/tours','Admin\CreateTourController@index');
-
 	Route::get('/admin/tours/nuevo','Admin\CreateTourController@stepOne');
-
     Route::post('/admin/tours/intermedio','Admin\CreateTourController@intermedio');
-
 	Route::get('/admin/tours/paso-dos', 'Admin\CreateTourController@stepTwo');    
-
 	Route::resource('/admin/tours/guardar','Admin\CreateTourController@store');
-
 	Route::post('/admin/tours/crear','Admin\CreateTourController@create');
-
 	Route::get('/admin/tours/editar/{id}','Admin\CreateTourController@edit');
-
 	Route::post('/admin/tours/update/{id}','Admin\CreateTourController@update');
-
 	Route::get('/admin/tours/borrar/{id}', 'Admin\CreateTourController@destroy');
 
     // utilizo la misma ruta para servir dos view diferentes

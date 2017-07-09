@@ -17,7 +17,7 @@
                             {!! csrf_field() !!}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Nombre/Agencia</label>
+                                <label class="col-md-4 control-label">Persona contacto</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="name" value="{{ old('name') }}">
@@ -25,6 +25,51 @@
                                     @if ($errors->has('name'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('nombre_agencia') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">Nombre agencia</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="nombre_agencia"
+                                     value="{{ old('nombre_agencia') }}">
+
+                                    @if ($errors->has('nombre_agencia'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('nombre_agencia') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('telefono') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">Telefono</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="telefono"
+                                     value="{{ old('telefono') }}">
+
+                                    @if ($errors->has('telefono'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('telefono') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('web') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">Web</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="web"
+                                     value="{{ old('web') }}">
+
+                                    @if ($errors->has('telefono'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('web') }}</strong>
                                         </span>
                                     @endif
                                 </div>

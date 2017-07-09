@@ -16,7 +16,7 @@
         	    </h3>
         	@else
         	    <h1 class="text-center lato-300">¡Oooooh!</h1>
-        	    <h3 class="lato-300 text-center">La oferta no ha podiso ser {{ $message }} corectamente. Intentalo otra vez.
+        	    <h3 class="lato-300 text-center">La oferta no ha podido ser {{ $message }} corectamente. Intentalo otra vez.
         	    </h3>
         	@endif 
     </div>

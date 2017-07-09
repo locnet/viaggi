@@ -18,6 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->rememberToken();
+            $table->string('nombre_agencia');
+            $table->varchar('telefono');
+            $table->string('web');
+            $table->integer('status')->default(0);
+            $table->string('confirmation_code',30);
             $table->timestamps();
         });
     }
