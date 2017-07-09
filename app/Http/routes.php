@@ -76,8 +76,6 @@ Route::get('facebook/callback', 'Auth\SocialLogin@facebook_callback');
 Route::get('login/google', 'Auth\SocialLogin@google');
 Route::get('google/callback','Auth\SocialLogin@google_callback');
 
-// Registro/autentificacion agencias
-Route::get('agencia','Auth\AgencyController@index');
 
 /*
 |-----------------------------------------------------------------
