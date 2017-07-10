@@ -72,4 +72,17 @@ class AuthController extends Controller
             'confirmation_code' => str_random(30)
         ]);
     }
+
+    /**
+     * Confirmacion del registro nueva agencia.
+     *
+     * @param  string  $confirmation_code
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function getConfirmation($code) 
+    {
+         $user = User::where('confirmation_code',$code);
+         return $user;
+    }
 }
