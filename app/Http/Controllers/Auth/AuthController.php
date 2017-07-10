@@ -80,9 +80,9 @@ class AuthController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    public function getConfirmation($code) 
+    public function getConfirmation($confirmation_code) 
     {
-         $user = User::where('confirmation_code',$code);
+         $user = User::where('confirmation_code',$confirmation_code)->get();
          return $user;
     }
 }
