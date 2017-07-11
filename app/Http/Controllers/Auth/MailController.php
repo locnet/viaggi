@@ -26,6 +26,7 @@ class MailController extends Controller
         {
             $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Welcome!');
         });
+        return view('auth.success_message', compact('user'));
     }
 
     /**
