@@ -24,8 +24,9 @@ class MailController extends Controller
 
         Mail::send('mails.welcome_mail', ['user' => $user], function($message)
         {
-            $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Welcome!');
+            $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Confirmacion registro');
         });
+
         return view('auth.success_message', compact('user'));
     }
 

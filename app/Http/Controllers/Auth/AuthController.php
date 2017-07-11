@@ -23,7 +23,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     // private $loginPath = '/';
-
+    protected $redirectTo;
     /**
      * Create a new authentication controller instance.
      *
@@ -61,6 +61,10 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        $random = str_random(30);
+        //sobreescribimos la ruta post registro
+        $this->redirectTo = '/send-confirmation/'.$random;  
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -69,7 +73,7 @@ class AuthController extends Controller
             'telefono' => $data['telefono'],
             'web' => $data['web'],
             'status' => 0,
-            'confirmation_code' => str_random(30)
+            'confirmation_code' => $random
         ]);
     }
 }
