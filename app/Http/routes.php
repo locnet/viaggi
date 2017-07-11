@@ -60,7 +60,12 @@ Route::get('newsletter/destroy/{email}/{token}', 'Contact\Newsletter@destroy');
 Route::get('auth', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
-Route::get('auth/politica','Auth\AuthController@getPolicy');
+
+/*---------------------------------------------------------
+| POLITICA PRIVACIDAD
+|----------------------------------------------------------
+*/
+Route::get('politica-de-privacidad','PolicyController@index');
 
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');

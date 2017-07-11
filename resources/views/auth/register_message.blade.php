@@ -13,7 +13,7 @@
                 abajo te dejamos un enlace.  
 	            </h3>
 	            <h4>
-	            	<a href="{{ url('auth/politica') }}">Politica de privacidad </a>
+	            	<a href="{{ url('politica-de-privacidad') }}">Politica de privacidad </a>
 	            </h4>
         	</div>
 

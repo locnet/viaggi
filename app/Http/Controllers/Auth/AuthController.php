@@ -72,9 +72,4 @@ class AuthController extends Controller
             'confirmation_code' => str_random(30)
         ]);
     }
-
-    // politica privacidad
-    public function getPolicy(){
-        return view('auth.politica_privacidad');
-    }
 }
