@@ -4,8 +4,12 @@
     <div class="container">
         <div class="row">
         	<div class="col-md-8 col-md-offset-2">
-	            <h2 class="lato-300 dark-blue text-center">Gracias por registrate {{ ucwords($user->name) }}</h2>
-				<h4>Mira tu correo electronico, queda una ultima cosa por hacer.</h4>
+	            <h2 class="lato-300 dark-blue text-center">Gracias por registrate, {{ ucwords($user->name) }}</h2>
+				<h3 class="lato-300">Hemos mandado un correo electonico con la confirmacion de tu registro. 
+					Te rogamos que sigas las instrucciones que te hemos mandado para confirmar tu 
+					registro.
+				</h3>
+				<h3 class="lato-300 text-center blue">Otra verz, gracias.</h3>
 			</div>
         </div>
     </div>
