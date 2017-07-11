@@ -73,16 +73,8 @@ class AuthController extends Controller
         ]);
     }
 
-    /**
-     * Confirmacion del registro nueva agencia.
-     *
-     * @param  string  $confirmation_code
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    public function getConfirmation($confirmation_code) 
-    {
-         $user = User::where('confirmation_code',$confirmation_code)->get();
-         return $user;
+    // politica privacidad
+    public function getPolicy(){
+        return view('auth.politica_privacidad');
     }
 }
