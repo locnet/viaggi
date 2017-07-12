@@ -12,16 +12,16 @@
 	        	<th><h4 class="lato-300 blue">Email</h4></th>
 	        	<th><h4 class="lato-300 blue"></h4></th>
 	        </tr>
-        	@foreach ($agencias as $agencia)
-        		<td><p>{{ $agencia->nombre_agencia }}</p></td>
-        		<td><p>{{ $agencia->nombre }}</p></td>
-        		<td><p>{{ $agencia->telefono }}</p></td>
-        		<td><p>{{ $agencia->email}}</p></td>
-        		<td><p><a href="{{ url('admin/agencia/'.$agencia->id) }}">Ver Mas</a></p></td>
+        	@foreach ($users as $user)
+        		<td><p>{{ $user->nombre_agencia }}</p></td>
+        		<td><p>{{ $user->name }}</p></td>
+        		<td><p>{{ $user->telefono }}</p></td>
+        		<td><p>{{ $user->email}}</p></td>
+        		<td><p><a href="{{ url('admin/agencia/'.$user->id) }}">Ver Mas</a></p></td>
         	</tr>
         	@endforeach
         </table>
         {{-- menu paginacion --}}
-        {!! $agencias->render() !!}
+        {!! $users->render() !!}
 	</div>
 @stop

@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Agencias;
+use App\User;
 
 class AgenciasController extends Controller
 {
-    private $agencias;
+    private $user;
 
-    public function __construct(Agencias $agencias)
+    public function __construct(User $user)
     {
-        $this->agencias = $agencias;
+        $this->user = $user;
     }
     /**
      * Display a listing of the resource.
@@ -24,8 +24,8 @@ class AgenciasController extends Controller
     public function index()
     {
         // paginamos los resultados, en el view se generara un menu automatico
-        $agencias = $this->agencias->paginate(15);
-        return view('admin.agencias.index',compact('agencias'));
+        $users = $this->user->paginate(15);
+        return view('admin.agencias.index',compact('users'));
     }
 
     /**
@@ -57,7 +57,7 @@ class AgenciasController extends Controller
      */
     public function show($id)
     {
-        $agencia = $this->agencias->find($id);
+        $agencia = $this->user->find($id);
         return view('admin.agencias.agencia',compact('agencia'));
     }
 
