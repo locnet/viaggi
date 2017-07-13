@@ -1,11 +1,3 @@
-
-<h2>Gracias por registrate {{ ucwords($user->name) }}</h2>
-<h4>Para terminar corectamente el proceso de registro de agencia te rogamos que has click en el
-	siguiente enlace. Si el enlace no funciona copia y pega la siquiente direccion en tu 
-	navegador preferido.</h4>
-<p>
-			
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,20 +135,17 @@
                                              color: #666666;" class="padding-copy">
                                              Para terminar corectamente el proceso de registro de agencia te 
                                              rogamos que has click en el siguiente en este
-                                             <a href="{{ url('get-confirmation/'.$user->confirmation_code) }}">Enlace</a></p>.
-                                             Si el enlace no funciona copia y pega la siquiente direccion en tu navegador preferido.
-                                             {{  url('get-confirmation/'.$user->confirmation_code) }}
+                                             <a href="{{ url('get-confirmation/'.$user->confirmation_code) }}">Enlace</a>.                                             
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est. Aenean at mollis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est. Aenean at mollis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est. Aenean at mollis ipsum.</td>
+                                            <td align="left" style="padding: 20px 0 0 0;
+                                             font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; 
+                                             color: #666666;" class="padding-copy">
+                                         Si el enlace no funciona copia y pega la siquiente direccion en tu navegador preferido.
+                                             {{  url('get-confirmation/'.$user->confirmation_code) }}.</td>
                                         </tr>
-                                        <tr>
-                                            <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Cheers,<br>The Team</td>
-                                        </tr>
+                                        
                                     </table>
                                 </td>
                             </tr>
