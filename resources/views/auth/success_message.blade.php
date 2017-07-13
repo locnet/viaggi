@@ -9,7 +9,7 @@
 					Te rogamos que sigas las instrucciones que te hemos mandado para confirmar tu 
 					registro.
 				</h3>
-				<h3 class="lato-300 text-center blue">Otra verz, gracias.</h3>
+				<h3 class="lato-300 text-center">Te esperamos encantados.</h3>
 			</div>
         </div>
     </div>

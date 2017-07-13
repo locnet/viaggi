@@ -5,3 +5,4 @@
 	navegador preferido.</h4>
 <p><a href="{{ url('get-confirmation/'.$user->confirmation_code) }}">Enlace</a></p>
 			
+{{  url('get-confirmation/'.$user->confirmation_code) }}			
