@@ -1,5 +1,6 @@
 @extends('master')
-
+@section('title','Confirma tu registro en nuestra agencia')
+@section('meta_description','Tours de Andalucia al mejor precio del mercado.')
 @section('content')
     <div class="container">
         <div class="row">

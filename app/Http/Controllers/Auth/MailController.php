@@ -48,7 +48,7 @@ class MailController extends Controller
             $user->save();
             $message = "Gracias, la cuenta ha sido activada corectamente.";
         } else {
-            $message = "Esta cuenta esta activa, no es necesario activarla de nuevo.";
+            $message = "Esta cuenta ya esta activada, no tienes que hacer nada mas.";
         }
         return view('auth.register_message')->with('message',$message);
      }
