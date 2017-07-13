@@ -89,7 +89,9 @@ class MailController extends Controller
 
         
         if ($user) {
-            $user->delete();             
+            $user->delete();
+            return view('errors.user_error')->withMessage('Tu cuenta ha sido borrada de nuestra base de 
+                datos. ¡Hasta la proxima!')             
         } else {
             return view('errors.user_error')->withMessage('No hemos podido borrar tu cuenta porque 
                 este usuario no existe en nuestra base de datos.');
