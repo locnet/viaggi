@@ -16,10 +16,12 @@
 				@endif
 			</p></li>
         	<li><p>Registro confirmado: {{ $agencia->status === 1 ? "Si" : "No" }}</p></li>
-            <li><p>
-                ¿Mandar otra vez el recordatorio? <a href="{{ url('send-again/'.$agencia->confirmation_code) }}">
-                <button  class="btn btn-success">Mandar</button></a>
-        	</p></li>
+            @if ($agencia->status === 0)
+                <li><p>
+                    ¿Mandar otra vez el recordatorio? <a href="{{ url('send-again/'.$agencia->confirmation_code) }}">
+                    <button  class="btn btn-success">Mandar</button></a>
+            	</p></li>
+            @endif
         </ul>
         <h3 class="roboto pull-right"><a href="{{ url('admin/agencias') }}">
             <i class="fa fa-arrow-left"></i>Volver al listado</a>
