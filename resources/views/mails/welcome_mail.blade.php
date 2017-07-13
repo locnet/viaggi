@@ -135,15 +135,16 @@
                                              color: #666666;" class="padding-copy">
                                              Para terminar corectamente el proceso de registro de agencia te 
                                              rogamos que has click en el siguiente en este
-                                             <a href="{{ url('get-confirmation/'.$user->confirmation_code) }}">Enlace</a>.                                             
+                                             <a href="{{ url('get-confirmation/'.$user->confirmation_code) }}">enlace</a>.                                             
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="left" style="padding: 20px 0 0 0;
-                                             font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; 
-                                             color: #666666;" class="padding-copy">
-                                         Si el enlace no funciona copia y pega la siquiente direccion en tu navegador preferido.
-                                             {{  url('get-confirmation/'.$user->confirmation_code) }}.</td>
+	                                            font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; 
+	                                            color: #666666;" class="padding-copy">
+	                                            Si el enlace no funciona copia y pega la siquiente direccion en tu navegador preferido.
+	                                            <p>{{  url('get-confirmation/'.$user->confirmation_code) }}.</p>
+                                            </td>
                                         </tr>
                                         
                                     </table>
