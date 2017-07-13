@@ -36,6 +36,31 @@ class MailController extends Controller
     }
 
     /**
+     * Mandar otra vez el email con las instrucciones para confirmar el registro.
+     *
+     * @param  string  $confirmation_code
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function sendAgain($confirmation_code) 
+    {
+        $user = User::where('confirmation_code','=', $confirmation_code)->first();
+      
+        if ($user) {
+            Mail::send('mails.send_again_mail', ['user' => $user], function($message)
+            {
+                $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Confirmacion registro Andalusiando Viaggi');
+            });
+
+            return view('auth.success_message', compact('user'));
+        } else {
+            return view('errors.user_error')->withMessage('Ha ocurido un error inesperado, por favor 
+                vuelve al correo electronico y intentalo otra vez. Si el error persiste mandanos un 
+                email al info@andalsiandoviaggi.com.');
+        }
+    }
+
+    /**
      * Confirmacion del registro nueva agencia.
      *
      * @param  string  $confirmation_code

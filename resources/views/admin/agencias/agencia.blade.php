@@ -15,8 +15,10 @@
     				<a href="http://www.{{ $agencia->web }}">Ver</a>
 				@endif
 			</p></li>
-        	<li><p>Registro confirmado:
-            	{{ $agencia->status === 1 ? "Si" : "No" }}
+        	<li><p>Registro confirmado: {{ $agencia->status === 1 ? "Si" : "No" }}</p></li>
+            <li><p>
+                ¿Mandar otra vez el recordatorio? <a href="{{ url('send-again/'.$agencia->confirmation_code) }}">
+                <button  class="btn btn-success">Mandar</button></a>
         	</p></li>
         </ul>
         <h3 class="roboto pull-right"><a href="{{ url('admin/agencias') }}">

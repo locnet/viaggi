@@ -72,9 +72,11 @@ Route::get('politica-de-privacidad','PolicyController@index');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('send-confirmation/{confirmation_code}', 'Auth\MailController@sendConfirmation');
+Route::get('send-again/{confirmation_code}', 'Auth\MailController@sendAgain');
 Route::get('get-confirmation/{confirmation_code}' ,'Auth\MailController@getConfirmation');
 Route::get('borrar/{confirmation_code}/{email}','Auth\MailController@unsuscribe');
 Route::get('borrar/agencia/{id}/{confirmation_code}', 'Auth\MailController@deleteAgency');
+
 
 // Reset password...
 Route::get('password/reset', 'Auth\PasswordController@getEmail');
