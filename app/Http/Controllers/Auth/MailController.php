@@ -21,13 +21,18 @@ class MailController extends Controller
     {
         $user = User::where('confirmation_code','=', $confirmation_code)->first();
       
+        if ($user) {
+            Mail::send('mails.welcome_mail', ['user' => $user], function($message)
+            {
+                $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Confirmacion registro Andalusiando Viaggi');
+            });
 
-        Mail::send('mails.welcome_mail', ['user' => $user], function($message)
-        {
-            $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Confirmacion registro Andalusiando Viaggi');
-        });
-
-        return view('auth.success_message', compact('user'));
+            return view('auth.success_message', compact('user'));
+        } else {
+            return view('errors.user_error')->withMessage('Ha ocurido un error inesperado, por favor 
+                vuelve al correo electronico y intentalo otra vez. Si el error persiste mandanos un 
+                email al info@andalsiandoviaggi.com.');
+        }
     }
 
     /**
@@ -54,14 +59,41 @@ class MailController extends Controller
     }
 
     /**
+    * Confirmacion borrado agencia
     *
-    *
+    * @param string $confirmation_code
+    * @param string $email
     */
     public function unsuscribe($confirmation_code, $email) 
     {
-        $agency = User::where('confirmation_code',$confirmation_code)
-                        ->where('email',$email);
+        $user = User::where('confirmation_code','=',$confirmation_code)
+                        ->where('email','=',$email)->first();
+        
+        if ($user) {
+            return view('auth.confirm_unsuscribe', compact('user'));
+        } else {
+            return view('errors.user_error')->withMessage('El usuario no existe en la base de datos.');
+        }
+        
+    }
 
-        return view('unsuscribe.blade.php');
+    /**
+    * Borrar agencia
+    *
+    * @param int $id
+    */
+
+    public function deleteAgency($id, $confirmation_code) 
+    {
+        $user = User::where('confirmation_code',$confirmation_code)->where('id',$id)->first();
+
+        
+        if ($user) {
+            $user->delete();             
+        } else {
+            return view('errors.user_error')->withMessage('No hemos podido borrar tu cuenta porque 
+                este usuario no existe en nuestra base de datos.');
+        }
+        
     }
 }

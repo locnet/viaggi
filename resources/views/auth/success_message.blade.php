@@ -2,7 +2,7 @@
 @section('title','Confirma tu registro en nuestra agencia')
 @section('meta_description','Tours de Andalucia al mejor precio del mercado.')
 @section('content')
-    <div class="container">
+    <div class="container" style="min-height:400px">
         <div class="row">
         	<div class="col-md-8 col-md-offset-2">
 	            <h2 class="lato-300 dark-blue text-center">Gracias por registrate, {{ ucwords($user->name) }}</h2>

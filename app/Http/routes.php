@@ -73,7 +73,8 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('send-confirmation/{confirmation_code}', 'Auth\MailController@sendConfirmation');
 Route::get('get-confirmation/{confirmation_code}' ,'Auth\MailController@getConfirmation');
-Route::get('unsuscribe/{confirmation_code}/{email}','Auth\MailController@unsuscribe');
+Route::get('borrar/{confirmation_code}/{email}','Auth\MailController@unsuscribe');
+Route::get('borrar/agencia/{id}/{confirmation_code}', 'Auth\MailController@deleteAgency');
 
 // Reset password...
 Route::get('password/reset', 'Auth\PasswordController@getEmail');
