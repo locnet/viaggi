@@ -46,14 +46,18 @@ class MailController extends Controller
      public function getConfirmation($confirmation_code) 
     {
         $user = User::where('confirmation_code','=', $confirmation_code)->first();
-
-        if ( $user->status === 0) {      // el registro no esta confirmado
-            
-            $user->status = 1;
-            $user->save();
-            $message = "Gracias, la cuenta ha sido activada corectamente.";
+        
+        if ($user) {
+            if ( $user->status === 0) {      // el registro no esta confirmado
+                
+                $user->status = 1;
+                $user->save();
+                $message = "Gracias, la cuenta ha sido activada corectamente.";
+            } else {
+                $message = "Esta cuenta ya esta activada, no tienes que hacer nada mas.";
+            }
         } else {
-            $message = "Esta cuenta ya esta activada, no tienes que hacer nada mas.";
+            return view('errors.user_error')->withMessage('El usuario no existe en la base de datos.');
         }
         return view('auth.register_message')->with('message',$message);
     }
