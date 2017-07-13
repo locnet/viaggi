@@ -61,17 +61,19 @@ Route::get('auth', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
+
 /*---------------------------------------------------------
 | POLITICA PRIVACIDAD
 |----------------------------------------------------------
 */
 Route::get('politica-de-privacidad','PolicyController@index');
 
-// Registration routes...
+// Registro agencias
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('send-confirmation/{confirmation_code}', 'Auth\MailController@sendConfirmation');
 Route::get('get-confirmation/{confirmation_code}' ,'Auth\MailController@getConfirmation');
+Route::get('unsuscribe/{confirmation_code}/{email}','Auth\MailController@unsuscribe');
 
 // Reset password...
 Route::get('password/reset', 'Auth\PasswordController@getEmail');

@@ -171,12 +171,14 @@
             <!-- UNSUBSCRIBE COPY -->
             <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 500px;" class="responsive-table">
                 <tr>
-                    <td align="left" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
-                        1234 Main Street, Anywhere, MA 01234, USA
+                    <td align="left" style="font-size: 12px; line-height: 18px;
+                     font-family: Helvetica, Arial, sans-serif; color:#666666;">
+                        Calle Arrebolado Nº 7, 3º A, 29009 Malaga, España
                         <br>
-                        <a href="http://litmus.com" target="_blank" style="color: #666666; text-decoration: none;">Unsubscribe</a>
-                        <span style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <a href="http://litmus.com" target="_blank" style="color: #666666; text-decoration: none;">View this email in your browser</a>
+                        <a href="{{ url('unsuscribe/'.$user->confirmation_code.'/'.$user->email) }}" 
+                        	target="_blank" style="color: #666666;  text-decoration: none;">
+                        	Desabonar</a>
+                        
                     </td>
                 </tr>
             </table>

@@ -39,7 +39,7 @@ class MailController extends Controller
      */
      
      public function getConfirmation($confirmation_code) 
-     {
+    {
         $user = User::where('confirmation_code','=', $confirmation_code)->first();
 
         if ( $user->status === 0) {      // el registro no esta confirmado
@@ -51,6 +51,17 @@ class MailController extends Controller
             $message = "Esta cuenta ya esta activada, no tienes que hacer nada mas.";
         }
         return view('auth.register_message')->with('message',$message);
-     }
-    
+    }
+
+    /**
+    *
+    *
+    */
+    public function unsuscribe($confirmation_code, $email) 
+    {
+        $agency = User::where('confirmation_code',$confirmation_code)
+                        ->where('email',$email);
+
+        return view('unsuscribe.blade.php');
+    }
 }

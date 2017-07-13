@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('title','Somos mayoristas de viajes a Andalucia')
+@section('meta_description','Andalusiandoviaggi vende tours y reservas de hoteles a agencias 
+y particulares. Los mejores precios para hacer tours de Andalucia.')
 @section('content')
 <section class="search-form-container">
     <div class="container">
