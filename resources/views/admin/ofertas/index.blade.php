@@ -9,7 +9,7 @@
     				<tr>
     					<td></td>
     					<td><h4 class="lato-300 dark-blue">Titulo</h4></td>
-    					<td><h4 class="lato-300 dark-blue">Fecha creacion</h4></td>
+    					<td class="hidden-xs"><h4 class="lato-300 dark-blue">Fecha creacion</h4></td>
     					<td><h4 class="lato-300 dark-blue">Editar</h4></td>
     					<td><h4 class="lato-300 dark-blue">Borar</h4></td>
     				</tr>
@@ -20,12 +20,12 @@
 	                                <img alt="{{ ucfirst($oferta->titulo) }}"
 	                                    src="{{ asset('admin/images')."/".$oferta->foto }}"
 	                                    width="60" height="40" /> 
-	                                </a>
+	                            </a>
 	                        </td>
 	                        <td>
 	                        	<p class="roboto">{{ $oferta->titulo }}</p>
 	                        </td>
-	                        <td>
+	                        <td class="hidden-xs">
 	                        	<p class="roboto">{{ $oferta->created_at }}</p>
 	                        </td>
 	                        
