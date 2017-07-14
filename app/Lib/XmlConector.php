@@ -25,7 +25,9 @@ class XmlConector
 		if(App::environment('local')){
 			   	$wsdl = Config::get('constants.DEVELOPMENT_WSDL');
 		    }else{
-			    $wsdl = Config::get('constants.PRODUCTION_WSDL');
+		    	// hay que borrar la primera linea y descomentar la segunda
+		    	$wsdl = Config::get('constants.DEVELOPMENT_WSDL');
+			    //$wsdl = Config::get('constants.PRODUCTION_WSDL');
 		}	
 		//creamos un cliente, si no tiro una exception
 		if(!$this->soapClient = new SoapClient($wsdl)){

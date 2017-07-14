@@ -6,10 +6,8 @@ hoteles y tours.')
 @section('content')
     <div class="container">
         <div class="row">
-        	<div class="alert alert-success login">
-            	<h2 class="lato-300 dark-blue text-center">{{$message}}</h2>
-            </div>
             <div class="col-md-8 col-md-offset-2">
+                <h2 class="lato-300 dark-blue text-center">{{$message}}</h2>
             	<h3 class="lato-300">Tus datos seran guardados en nuestra base de datos y nunca seran 
             	cedidos o compartidos con terceros. Puedes consultar nuestra politica de privacidad en 
                 el enlace de abajo.
