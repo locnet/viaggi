@@ -121,19 +121,14 @@
                                         <tr>
                                             <td align="left" style="padding: 20px 0 0 0; font-size: 16px;
                                              line-height: 25px; font-family: Helvetica, Arial, sans-serif; 
-                                             color: #666666;" class="padding-copy">Hola de nuevo{{ ucwords($user->name) }},</td>
+                                             color: #666666;" class="padding-copy">Hola de nuevo {{ ucwords($user->name) }},</td>
                                         </tr>
                                         <tr>
                                             <td align="left" style="padding: 20px 0 0 0; 
                                             font-size: 16px; line-height: 25px; font-family: 
                                             Helvetica, Arial, sans-serif; color: #666666;" 
                                             class="padding-copy">Hemos visto que todavia no has confirmado el registro.</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" style="padding: 20px 0 0 0; font-size: 16px;
-                                             line-height: 25px; font-family: Helvetica, Arial, sans-serif;
-                                             color: #666666;" class="padding-copy">
-                                             Para terminar corectamente el proceso de registro de agencia te 
+                                            Para terminar corectamente el proceso de registro de agencia te 
                                              rogamos que has click en el siguiente en este
                                              <a href="{{ url('get-confirmation/'.$user->confirmation_code) }}">enlace</a>.                                             
                                             </td>

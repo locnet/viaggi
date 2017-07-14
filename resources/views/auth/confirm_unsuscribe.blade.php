@@ -5,8 +5,8 @@
     <div class="container" style="min-height:400px">
         <div class="row">
         	<div class="col-md-8 col-md-offset-2">
-	            <h2 class="lato-300 dark-blue text-center">Te hecharemos de menos {{ ucwords($user->name) }}</h2>
-				<h3 class="lato-300 orange text-center">¡Esto no sera lo mismo sin ti!</h3>
+	            <h2 class="lato-300 dark-blue text-center">¡Te hecharemos de menos {{ ucwords($user->name) }}!</h2>
+				<h3 class="lato-300 orange text-center">Esto no sera lo mismo sin ti...</h3>
 				<h4 class="lato-300">Para borrar de forma permanente tu cuenta de agencia solo tienes
 				 que pulsar el boton de abajo y tu registro se borrado de nuestra base de datos.</h4>
 			</div>

@@ -52,7 +52,7 @@ class MailController extends Controller
                 $message->to('locnetarganda@gmail.com', 'John Smith')->subject('Confirmacion registro Andalusiando Viaggi');
             });
 
-            return view('auth.success_message', compact('user'));
+            return view('auth.send_again_confirm', compact('user'));
         } else {
             return view('errors.user_error')->withMessage('Ha ocurido un error inesperado, por favor 
                 vuelve al correo electronico y intentalo otra vez. Si el error persiste mandanos un 
