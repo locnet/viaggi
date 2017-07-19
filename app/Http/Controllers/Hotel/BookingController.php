@@ -136,7 +136,8 @@ class BookingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function confirmPaxData(Request $request){
+    public function confirmPaxData(Request $request)
+    {
         Input::flash();
         $validate = $this->validate($request, [
             'room_1_contact' => 'required',
@@ -155,7 +156,8 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function makeBooking(Request $request) {
+    public function makeBooking(Request $request)
+    {
         Input::flash();
         $validate = $this->validate($request, [
             'stripeToken' => 'required',
@@ -193,7 +195,8 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    private function makeTemporalBooking($input) {
+    private function makeTemporalBooking($input) 
+    {
         try{
             // PARAMETROS RESERVA
             $xml = new XmlConector();
@@ -258,7 +261,8 @@ class BookingController extends Controller
      * @param $locata   el localizador temporal
      * @param $input    the request data
      */
-    private function payBooking($locata, $input) {
+    private function payBooking($locata, $input) 
+    {
         /* intentamos el pago, si todo sale bien reservamos en firme
          * primero comprobamos que no tengamos el locata en la db
          */

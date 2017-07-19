@@ -7,9 +7,29 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use Auth;
-
+use App\Reservas;
+use App\Tour;
+use App\Ofertas;
+use App\Procentajes;
+use Carbon\Carbon;
 class MainController extends Controller
 {
+    private $agencias;
+    private $reservas;
+    private $tour;
+    private $ofertas;
+    private $procentajes;
+
+    public function __construct(User $user, Reservas $reservas, Tour $tour, Ofertas $ofertas,
+        Procentajes $procentajes)
+    {
+        $this->agencias = $user;
+        $this->reservas = $reservas;
+        $this->tour = $tour;
+        $this->ofertas = $ofertas;
+        $this->procentajes = $procentajes;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,8 +37,17 @@ class MainController extends Controller
      */
     public function index()
         {
-            $user = Auth::user();       
-            return view('admin.main')->withMessage($user->name);
+            $user = Auth::user();
+            $confirmed = $this->agencias->status(1)->get();
+            $unconfirmed = $this->agencias->status(0)->get();
+            $reservas = $this->reservas->all();
+            $ofertas = $this->ofertas->all();
+            $tours = $this->tour->all();
+            $procentajes = $this->procentajes->first();
+
+            return view('admin.main', compact('confirmed','unconfirmed','reservas',
+                                            'ofertas','tours','procentajes'))
+                    ->withMessage($user->name);
     }
 
     /**

@@ -140,4 +140,8 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 	// Agencias
 	Route::get('/admin/agencias','Admin\AgenciasController@index');
 	Route::get('/admin/agencia/{id}','Admin\AgenciasController@show');
+
+	// Reservas
+	Route::get('/admin/reservas', 'Admin\ReservasController@index');
+	Route::get('/admin/reservas/{locata}' ,'Admin\ReservasController@getBooking');
 });

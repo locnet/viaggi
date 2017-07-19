@@ -12,7 +12,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		@yield('customcss')		
+		@yield('customcss')
+		@yield('customjs')	
     </head>
 	<body>
 		@yield('preloader')
@@ -39,7 +40,7 @@
 				    		<li id="status">
 				    			@if (Auth::user() && Auth::check())	
 				    		        <a href="#">
-				    		        	<span class="fa">Hola {{ ucfirst(Auth::user()->name) }}</span>
+				    		        	<span class="fa fa-male"></span> {{ ucfirst(Auth::user()->name) }}
 				    		        </a>
 				    		    @endif
 				    		</li>

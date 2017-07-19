@@ -71,6 +71,11 @@
 					            		<span class="fa fa-percent"></span>Procentajes
 					            	</a>
 					            </li>
+					            <li @yield('reservas')>
+					            	<a href="{{ url('admin/reservas') }}">
+					            		<span class="fa fa-shopping-cart"></span>Reservas
+					            	</a>
+					            </li>
 					            <li @yield('agencias')>
 					            	<a href="{{ url('admin/agencias') }}">
 					            		<span class="fa  fa-address-card-o"></span>Agencias
@@ -95,7 +100,7 @@
 			    	<ul class="nav navbar-nav navbar-right mobile">
 			    		<li id="status">
 			    			@if (Auth::user() && Auth::check())	
-			    		        <h3 class="lato-300 blue">Hola, {{ ucfirst(Auth::user()->name) }}</h3>
+			    		        <h3 class="lato-300 blue"><span class="fa fa-user"></span> {{ ucfirst(Auth::user()->name) }}</h3>
 			    		    @endif
 			    		</li>
 		            </ul>
