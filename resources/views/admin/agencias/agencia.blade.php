@@ -1,5 +1,5 @@
 @extends('admin_master')
-@section('title','Precio barato hoteles | Reservar hotel barato')
+@section('title','Detalles agencia | Enviar recordatorio')
 @section('agencias','class="active"')
 @section('content')
 	<div class="conteiner">
@@ -24,15 +24,19 @@
             </div>
             @if ($agencia->status === 0)
             <div class="col-sm-12 col-xs-12">
-                <h3 class="lato-300">
+                <h4 class="lato-300">
                     La agencia todavia no ha confirmado su registro, tienes la posibilidad de mandarle un 
-                    recordatorio</h3>
-                <p>
-                    ¿Enviar recordatorio? <a href="{{ url('send-again/'.$agencia->confirmation_code) }}">
-                    <button  class="btn btn-success" style="margin-left:15px">Enviar</button></a>
-                </p>
+                    recordatorio.
+                </h4>
+                <p class="rotobo-300"> ¿Enviar recordatorio?
+                    <a href="{{ url('send-again/'.$agencia->confirmation_code) }}">
+                        <button class="btn btn-primary" style="margin-left:40px">Enviar</button>
+                    </a> 
+                </p>              
             </div>
             @endif
+        </div>
+        <div class="row">
             <div class="col-md-12">
                 <h3 class="lato-300"><a href="{{ url('admin/agencias') }}" class="blue">
                     <i class="fa fa-arrow-left"></i>Volver al listado</a>

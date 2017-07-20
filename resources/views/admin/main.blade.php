@@ -13,7 +13,7 @@
         <div class="col-md-6 col-xs-12">
             <div id="agencychart"></div>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12" style="margin-top:60px">
             <h4 class="lato-300">
                 Valor reservas de este año: 
                 {{ number_format(App\Reservas::yearSales(Carbon\Carbon::now()->year)->sum('precio'), 2)  }} €
@@ -26,7 +26,7 @@
                 Tours activos en este momento: {{ $tours->count() }}
             </h4>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12" style="margin-top:60px">
             <h4 class="lato-300">
                 El beneficio en las reservas de hoteles es de {{ $procentajes->agencias }}% en agencias
                 y de {{ $procentajes->publico }}% en particulares.
@@ -55,8 +55,9 @@
 	        var chart = new google.visualization.PieChart(document.getElementById('agencychart'));
 	        chart.draw(data, options);
         }
-        // current year
+        // año en curso
         {{ $year = Carbon\Carbon::now()->year }}
+
         // grafico venta por meses
         google.charts.setOnLoadCallback(drawBookingChart);
         function drawBookingChart() {
