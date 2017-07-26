@@ -1,6 +1,6 @@
 @extends('admin_master')
 @section('title','Precio barato hoteles | Reservar hotel barato')
-@section('agencias','class="active"')
+@section('reservas','class="active"')
 @section('content')
 <div class="">		
     <h2 class="lato-300 text-center blue">Listado reservas</h2>
