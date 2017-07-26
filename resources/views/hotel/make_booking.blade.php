@@ -105,9 +105,10 @@ hotel en la playa.')
                             <div class="input-group-addon">
                                 <span class="fa fa-male"></span>
                             </div> 
-                                {!! Form::input('text','name',Auth::check() ? ucwords(Auth::user()->name) : old('name'), 
-                                                  ['class' => 'form-control',
-                                                  'id' => 'name']) 
+                                {!! Form::input('text','name',
+                                                Auth::check() ? ucwords(Auth::user()->name) : old('name'), 
+                                                ['class' => 'form-control',
+                                                'id' => 'name']) 
                                 !!}
                         </div>
                     </div>                                       
@@ -123,7 +124,7 @@ hotel en la playa.')
                             <div class="input-group-addon">
                                 <span class="fa fa-male"></span>
                             </div> 
-                              {!! Form::input('text','last_name',old('last_name'), 
+                              {!! Form::input('text','last_name',Auth::check() ? ucwords(Auth::user()->last_name : old('last_name'), 
                                                   ['class' => 'form-control',
                                                   'id' => 'last_name']) 
                                 !!}

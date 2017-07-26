@@ -32,15 +32,15 @@ y particulares. Los mejores precios para hacer tours de Andalucia.')
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
                                 <label class="col-md-4 control-label">Appelido</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="name" value="{{ old('surname') }}">
+                                    <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
 
-                                    @if ($errors->has('surname'))
+                                    @if ($errors->has('last_name'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('surname') }}</strong>
+                                            <strong>{{ $errors->first('last_name') }}</strong>
                                         </span>
                                     @endif
                                 </div>
