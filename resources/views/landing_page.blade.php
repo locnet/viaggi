@@ -5,8 +5,15 @@
 
     <section>  
         <div class="full-page-container">
-            <h3 class="lato-extra-big yellow text-center">Tus clientes necesitan ver lo mejor de Andalucia</h3>
-            <h3 class="roboto-extra-big yellow text-center">¿Hablamos?</h3>
+            <div class="col-md-6 col-xs-12" style="background-color: rgba(76, 67, 67, 0.75)">
+                <h2 class="lato-300 white text-center bold">¿Tienen tus clientes lo mejor de Andalucia?</h2>
+                <h4 class="lato-300 white">Los clientes son el activo mas importante de una empresa, 
+                    por esto tienes que ofrecerles siempre la mejor calidad junto al mejor precio.</h4>
+                <h4 class="lato-300 white">¿Y tu, les estas ofreciendo los mejores circuitos de Andalucia?</h4>
+                <h4 class="text-center">
+                    <a href=""><button class="btn btn-default">Saber mas</button></a>
+                </h4>
+            </div>
         </div>
     </section>
     
@@ -17,7 +24,7 @@
             </div>
             <div class="col-md-4 col-xs-12">
                 <h4 class="roboto-400 text-center dark-blue">Como trabajamos</h4>
-                <p class="roboto-700">Vender nuestros tours no es lo que mas nos importa, lo que de 
+                <p class="roboto-700">Vender nuestros tours de Andalucia no es lo que mas nos importa, lo que de 
                 verdad nos importa es consequir que tus clientes repitan contigo, ergo, tu repitas 
                 con nosotros. </p>
             </div>
