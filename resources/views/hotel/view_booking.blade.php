@@ -11,8 +11,8 @@ hotel en la playa.')
 	<div class="row">
 	    <div class="col-md-offset-1 col-md-10">		
 				<h1 class="lato-300 text-center blue">¡GRACIAS!</h1>
-				<h3 class="lato-300 text-center dark-grey">Te agradecemos tu confianza en los servicios de Andalusiando 
-					Viaggi. A continuacion tienes todos los detalles de tu reserva.
+				<h3 class="lato-300 text-center dark-grey">Te agradecemos tu confianza en los 
+					servicios de Andalusiando Viaggi. A continuacion tienes todos los detalles de tu reserva.
 				</h3>		
 		    <?php 
 		        foreach ($hotel->getNodes("BUILDING", false) as $h) {

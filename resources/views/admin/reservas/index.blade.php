@@ -1,5 +1,5 @@
 @extends('admin_master')
-@section('title','Precio barato hoteles | Reservar hotel barato')
+@section('title','Detalles reserva | Andalusiando Viaggi Administration')
 @section('reservas','class="active"')
 @section('content')
 <div class="">		

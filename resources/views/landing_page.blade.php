@@ -6,7 +6,8 @@
     <section>  
         <div class="full-page-container">
             <div class="col-md-6 col-xs-12" style="background-color: rgba(76, 67, 67, 0.75)">
-                <h2 class="lato-300 white text-center bold">¿Tienen tus clientes lo mejor de Andalucia?</h2>
+                <h2 class="lato-300 white text-center bold">A tus clientes les gustaran nuestros circuitos de 
+                    Andalucia</h2>
                 <h4 class="lato-300 white">Los clientes son el activo mas importante de una empresa, 
                     por esto tienes que ofrecerles siempre la mejor calidad junto al mejor precio.</h4>
                 <h4 class="lato-300 white">¿Y tu, les estas ofreciendo los mejores circuitos de Andalucia?</h4>
@@ -20,7 +21,7 @@
     <section>
         <div class="container">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <h1 class="lato-300 dark-grey text-center">Conocenos un poco</h1>
+                <h1 class="lato-300 dark-grey text-center">Conocenos</h1>
             </div>
             <div class="col-md-4 col-xs-12">
                 <h4 class="roboto-400 text-center dark-blue">Como trabajamos</h4>
@@ -29,7 +30,7 @@
                 con nosotros. </p>
             </div>
             <div class="col-md-4 col-xs-12">
-                <h4 class="roboto-400 text-center dark-blue">Cuanto vas ha pagar</h4>
+                <h4 class="roboto-400 text-center dark-blue">Precios</h4>
                 <p class="roboto-700">Hacemos lo imposible para consequir los mejores 
                     precios en alojamientos, transportes y comida para tus clientes. ¿Te han ofrecido mejor 
                     precio en otra parte? No pasa nada, tomamos una cerveza y tan amigos .</p>
@@ -47,7 +48,7 @@
         <div class="container">
             <div class="col-md-12 col-lg-12 col-xs-12">
                 <div class="row">
-                    <h1 class="lato-300 text-center white">Que hemos hecho ultimamente</h1>
+                    <h1 class="roboto-400 text-center white">Que hemos hecho ultimamente</h1>
                 </div>
                 @foreach($tours as $tour)
                     <div class="col-md-4 col-sm-6 col-xs-12">
@@ -86,7 +87,7 @@
         <div class="container">
             <div class="col-md-12 col-sm-6 col-xs-12">
                 <div class="row">
-                    <h1 class="lato-300 text-center white">Nuestras ultimas ofertas en hoteles </h1>
+                    <h1 class="roboto-400 text-center white">Ofertas en hoteles </h1>
                 </div>
                 @foreach($ofertas as $oferta)
                     <div class="col-md-4 col-sm-6 col-xs-12">  

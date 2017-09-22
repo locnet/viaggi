@@ -62,7 +62,7 @@
         google.charts.setOnLoadCallback(drawBookingChart);
         function drawBookingChart() {
           var data = google.visualization.arrayToDataTable([
-            ['Task', 'Ventas'],
+            ['Task', 'Ventas €'],
             ['Enero',      {{ App\Reservas::monthlySales(1, $year)->sum('precio') }}],
             ['Febrero',    {{ App\Reservas::monthlySales(2, $year)->sum('precio') }}],
             ['Marzo',      {{ App\Reservas::monthlySales(3, $year)->sum('precio') }}],
