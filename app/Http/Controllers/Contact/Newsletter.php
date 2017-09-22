@@ -91,7 +91,7 @@ class Newsletter extends Controller
         {
             $message->from('us@example.com', 'Laravel');
 
-            $message->to($mail);
+            $message->to("locnetarganda@gmail.com");
         });
     }
 
