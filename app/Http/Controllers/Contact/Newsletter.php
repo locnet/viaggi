@@ -64,10 +64,13 @@ class Newsletter extends Controller
                            'name'       => $request->name,
                            'token'      => $token,
                            'visitor_ip' => $_SERVER['REMOTE_ADDR']);
+
             // creamos entrada en la base de datos
             if ( $n =  Newsletters::firstOrCreate($query) ) {
                 // send the confirmacion email
-                $this->sendConfirmacionMail($n->email);
+                $mail = $n->email;
+
+                $this->sendConfirmacionMail($mail);
                 
                 return view('contact.newsletter_confirm')->withMessage("new");
             } else {
