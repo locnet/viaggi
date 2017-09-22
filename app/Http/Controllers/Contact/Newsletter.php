@@ -67,7 +67,7 @@ class Newsletter extends Controller
             // creamos entrada en la base de datos
             if ( $n =  Newsletters::firstOrCreate($query) ) {
                 // send the confirmacion email
-                $this->sendConfirmacionMail($request->email);
+                $this->sendConfirmacionMail($n->email);
                 
                 return view('contact.newsletter_confirm')->withMessage("new");
             } else {
