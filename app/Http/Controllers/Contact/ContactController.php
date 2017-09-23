@@ -39,6 +39,11 @@ class ContactController extends Controller
             $message->to('locnetarganda@gmail.com', 'Andalusiando Viaggi')
                     ->subject('Solicitud informacion');
         });
+        if (Mail::faillures() > 0) {
+            return view('contact.contact_success')->withMessage("error");
+        }
+        
+        return view('contact.contact_success')->withMessage('ok');
     }
 
     /**

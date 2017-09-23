@@ -130,15 +130,16 @@
                                             <td align="left" style="padding: 20px 0 0 0; font-size: 16px;
                                              line-height: 25px; font-family: Helvetica, Arial, sans-serif;
                                              color: #666666;" class="padding-copy">
-                                                Mensaje: 
-                                                <p>{{ $contact->text }}</p>
+                                                Mensaje: """
+                                                <p>{{ $contact->message }}</p>
+                                                """
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="left" style="padding: 20px 0 0 0;
 	                                            font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; 
 	                                            color: #666666;" class="padding-copy">
-	                                            <p>Contacto: {{  $contact->message }}.</p>
+	                                            <p>Contacto: {{  $contact->email }}.</p>
                                             </td>
                                         </tr>
                                         
