@@ -105,7 +105,22 @@ class Newsletter extends Controller
         
     }
 
+    /**
+    * User has confirmed the newsletter suscription
+    * @param string $email
+    */
+    public function confirmSuscription($email) {
+        $user = Newsletters::where('email', '=', $email)->first();
 
+        if ($user->active === 0) {
+            $user->active = 1;
+            $user->save();
+
+            return view('contact.newsletter_confirm')->withMessage('confirm');
+        } else {
+            return view('contact.newsletter_confirm')->withMessage('activated');
+        }
+    }
     /** 
     * Remove a resource from database
     * @param $email, el email a borrar

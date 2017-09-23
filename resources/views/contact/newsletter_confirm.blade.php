@@ -13,10 +13,19 @@
 	                    <div class="panel-body">
 	                    	@if ($message === "new") 
 	                    	    <h2 class="lato-300 text-center yellow">¡Gracias!</h2>
-	                    	    <h3 class="lato-300 text-center"> Te estamos agradecidos por suscribir a nuestro boletin 
-	                    	    	de noticias. Para terminar el proceso comprueba tu bandeja de entrada y sigue las 
+	                    	    <h3 class="lato-300 text-center"> Te estamos agradecidos por suscribir 
+	                    	    	a nuestro boletin de noticias. Para terminar el proceso
+	                    	    	comprueba tu bandeja de entrada y sigue las 
 	                    	    	instucciones que te hemos mandado para terminar el proceso de suscripcion.
 	                    	    	No olvides que puedes anular la suscripcion cuando quieras. </h3>
+	                    	@elseif ($message === "confirm") 
+	                    	    <h2 class="lato-300 text-center yellow">¡Bienvenido al club!</h2>
+	                    	    <h3 class="lato-300 text-center"> Solo te molestaremos con noticias 
+	                    	    importantes sobre nuevo tours y ofertas de Andaluciando Viaggi. No
+	                    	    olvides que puedes darte de baja cuando quieras.  </h3>
+	                    	@elseif ($message === "activated")
+	                    	    <h2 class="lato-300 text-center yellow">¡Suscripcion activada!</h2>
+	                    	    <h3 class="lato-300 text-center"> No es necesaria ninguna action mas.</h3>
 	                    	@elseif ($message === "exist")
 	                    	<h2 class="lato-300 text-center yellow">¡Upss!</h2>
 	                    	    <h3 class="lato-300 text-center"> Este correo electronico existe en nuestra 

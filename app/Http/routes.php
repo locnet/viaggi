@@ -50,6 +50,7 @@ Route::get('hotel/descargar/pdf{locata}','Hotel\PdfController@downloadPdf');
 Route::get('contact','Contact\ContactController@index');
 Route::get('newsletter','Contact\Newsletter@index');
 Route::post('newsletter/store','Contact\Newsletter@store');
+Route::get('newsletter/confirm/{email}', 'Contact\Newsletter@confirm');
 Route::get('newsletter/destroy/{email}/{token}', 'Contact\Newsletter@destroy');
 
 /*
