@@ -87,12 +87,22 @@ class Newsletter extends Controller
     */
     private function sendConfirmacionMail($mail) 
     {
-        Mail::raw('Text to e-mail', function($message)
-        {
-            $message->from('us@example.com', 'Laravel');
+        $user = Newsletters::where('email', '=', $mail)->first();
 
-            $message->to("locnetarganda@gmail.com");
-        });
+        if ($user) {
+            Mail::send('mails.newsletter_confirm_mail', ['user' => $user], function($message)
+            {
+                $message->to('locnetarganda@gmail.com', 'Andalusiando Viaggi')
+                        ->subject('Confirmacion registro Andalusiando Viaggi');
+            });
+
+            return view('auth.success_message', compact('user'));
+        } else {
+            return view('errors.user_error')->withMessage('Ha ocurido un error inesperado, por favor 
+                vuelve al correo electronico y intentalo otra vez. Si el error persiste mandanos un 
+                email al info@andalsiandoviaggi.com.');
+        }
+        
     }
 
 
