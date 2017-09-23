@@ -48,6 +48,7 @@ Route::get('hotel/descargar/pdf{locata}','Hotel\PdfController@downloadPdf');
 |----------------------------------------------------------------
 */
 Route::get('contact','Contact\ContactController@index');
+Route::post('contact/request', 'Contact\ContactController@sendRequest');
 Route::get('newsletter','Contact\Newsletter@index');
 Route::post('newsletter/store','Contact\Newsletter@store');
 Route::get('newsletter/confirm/{email}', 'Contact\Newsletter@confirmSuscription');

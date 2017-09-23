@@ -92,7 +92,7 @@ class Newsletter extends Controller
         if ($user) {
             Mail::send('mails.newsletter_confirm_mail', ['user' => $user], function($message)
             {
-                $message->to('locnetarganda@gmail.com', 'Andalusiando Viaggi')
+                $message->to($user->email, 'Andalusiando Viaggi')
                         ->subject('Confirmacion registro Andalusiando Viaggi');
             });
 
@@ -129,6 +129,7 @@ class Newsletter extends Controller
     public function destroy($email, $token)
     {
         if (strlen($token) === 16 && filter_var( $email, FILTER_VALIDATE_EMAIL )) {
+            
             $user = $this->newsletters->where('email',$email)
                                       ->where('token',$token)
                                       ->first();

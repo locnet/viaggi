@@ -24,9 +24,20 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function sendRequest(Request $request)
     {
-        //
+        $validate = $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required|min:10'
+            ]);
+        
+        // mandamos el email
+        Mail::send('mails.newsletter_confirm_mail', ['contact' => $request], function($message)
+        {
+            $message->to('locnetarganda@gmail.com', 'Andalusiando Viaggi')
+                    ->subject('Solicitud informacion');
+        });
     }
 
     /**

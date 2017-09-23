@@ -12,7 +12,8 @@
 	                    	<h3 class="lato-300 text-center">Estamos para ayudar.</h3>
 	                    </div>
 	                    <div class="panel-body">
-	                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/newsletter/store') }}">
+	                        <form class="form-horizontal" role="form" method="POST" 
+	                              action="{{ url('/contact/request') }}">
 	                            {!! csrf_field() !!}
 
 	                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -33,18 +34,13 @@
 	                                </div>
 	                            </div>
 	                           
-	                            <div class="form-group{{ $errors->has('mensaje') ? ' has-error' : '' }}">
+	                            <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
 	                                <label class="col-md-4 control-label">Mensaje</label>
 
 	                                <div class="col-md-6">
-	                                    {!! Form::textarea('mensaje', old('mensaje'),
+	                                    {!! Form::textarea('message', old('message'),
                                         ['class' => 'form-control']) !!}
 
-                                        @if ($errors->has('mensaje'))
-	                                        <span class="help-block">
-	                                            <strong>{{ $errors->first('mensaje') }}</strong>
-	                                        </span>
-	                                    @endif
 	                                </div>
 	                            </div>
 	                            <div class="form-group">
