@@ -34,7 +34,7 @@ class ContactController extends Controller
             ]);
         
         // mandamos el email
-        Mail::send('mails.newsletter_confirm_mail', ['contact' => $request], function($message)
+        Mail::send('mails.contact_request', ['contact' => $request], function($message)
         {
             $message->to('locnetarganda@gmail.com', 'Andalusiando Viaggi')
                     ->subject('Solicitud informacion');
