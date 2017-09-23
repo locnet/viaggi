@@ -170,9 +170,7 @@
                      font-family: Helvetica, Arial, sans-serif; color:#666666;">
                         Calle Arrebolado Nº 7, 3º A, 29009 Malaga, España
                         <br>
-                        <a href="{{ url('borrar/'.$user->confirmation_code.'/'.$user->email) }}" 
-                        	target="_blank" style="color: #666666;  text-decoration: none;">
-                        	Desabonar</a>
+                        
                         
                     </td>
                 </tr>
