@@ -112,8 +112,8 @@ class Newsletter extends Controller
     public function confirmSuscription($email) {
         $user = Newsletters::where('email', '=', $email)->first();
 
-        if ($user->active === 0) {
-            $user->active = 1;
+        if ($user->status === 0) {
+            $user->status = 1;
             $user->save();
 
             return view('contact.newsletter_confirm')->withMessage('confirm');
