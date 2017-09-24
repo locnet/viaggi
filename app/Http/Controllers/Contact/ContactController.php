@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Mail;
+use Config;
 
 class ContactController extends Controller
 {
@@ -40,65 +41,16 @@ class ContactController extends Controller
                     ->subject('Solicitud informacion');
         });
         if (count(Mail::failures())  > 0) {
-            return view('contact.contact_success')->withMessage("error");
+
+            // si el envio del email falla avisamos al administrator
+            Mail::raw('El formulario de contacto no funciona.', function($message)
+            {
+                $message->from('info@andalusiandoviaggi.com', 'Laravel error');
+
+                $message->to(Config::get('constants.ADMINISTRATOR_EMAIL'));
+            });
         }
-
+        // todo ok
         return view('contact.contact_success')->withMessage('ok');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    }   
 }

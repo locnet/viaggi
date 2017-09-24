@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Confirma tu registro</title>
+<title>Confirma tu registro en Andalusiando Viaggi</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,9 +130,10 @@
                                             <td align="left" style="padding: 20px 0 0 0; font-size: 16px;
                                              line-height: 25px; font-family: Helvetica, Arial, sans-serif;
                                              color: #666666;" class="padding-copy">
-                                                Mensaje: """
+                                                Mensaje:<br/>
+                                                *****************************************************
                                                 <p>{{ $contact->message }}</p>
-                                                """
+                                                *****************************************************
                                             </td>
                                         </tr>
                                         <tr>
