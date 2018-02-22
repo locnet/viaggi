@@ -133,6 +133,10 @@
 	                    <div class="col-md-2 col-xs-2 text-center">
 	                    	<h3><a href="#"><span class="fa fa-skype"></span></a></h3>
 	                    </div> 
+	                    <div class="col-md-12 col-xs-12 text-center" style="margin-top:30px">
+	                    	<h4 class="white">Diseño pagina web by <a href="https://www.admadesign.com">
+	                    	Adma Design</a></h4>
+	                    </div>
 					</div>
 					<div class="col-md-4 col-xs-12">
 						<h3 class="lato-300 text-center">Contacto</h3>

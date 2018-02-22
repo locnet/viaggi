@@ -27,9 +27,9 @@ class XmlConector
 		    }else{
 		    	// hay que borrar la primera linea y descomentar la segunda 
 		    	// para poner en produccion
-		    	$wsdl = Config::get('constants.DEVELOPMENT_WSDL');
-			    //$wsdl = Config::get('constants.PRODUCTION_WSDL');
-		}	
+		    	//$wsdl = Config::get('constants.DEVELOPMENT_WSDL');
+			    $wsdl = Config::get('constants.PRODUCTION_WSDL');
+		}
 		//creamos un cliente, si no tiro una exception
 		if(!$this->soapClient = new SoapClient($wsdl)){
 			throw new Exception('No se ha podido conectar con el servidor webservice!');
@@ -38,7 +38,7 @@ class XmlConector
 	
 
 	public function getString(){
-		//para ver los parametros descomentar la siguiente linea, solo debugging
+		// para ver los parametros descomentar la siguiente linea, solo debugging
 		// print_r(htmlspecialchars($this->parametros));
 
 		//conecto con la api de  SideTours
