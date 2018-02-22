@@ -176,10 +176,11 @@ class BookingController extends Controller
         $locata = $this->makeTemporalBooking($input);
 
         if ($locata) {
-            // la reserva esta hecha, pero no pagada
+            // en este punto la reserva esta hecha, pero no pagada
+
             // procesamos el pago y hacemos la reserva en firme
 
-            if ($this->payBooking($locata,$input)){
+            if ($this->payBooking($locata, $input)){
                 // tenemos la rezerva hecha y el pago realizado
                 return redirect('hotel/ver/reserva/'.$locata);
             } else {

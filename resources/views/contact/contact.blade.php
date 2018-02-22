@@ -9,7 +9,7 @@
 					<div class="panel">
 	                    <div class="panel-heading">
 	                    	<h2 class="lato-300 text-center">Todo empieza con un Hola</h2>
-	                    	<h3 class="lato-300 text-center">Estamos para ayudar.</h3>
+	                    	<h3 class="lato-300 text-center">Estamos a tu disposicion.</h3>
 	                    </div>
 	                    <div class="panel-body">
 	                        <form class="form-horizontal" role="form" method="POST" 

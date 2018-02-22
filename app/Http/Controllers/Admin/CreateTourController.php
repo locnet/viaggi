@@ -57,6 +57,7 @@ class CreateTourController extends Controller
     * @param \Illuminate\Http\Request $request
     */
     public function intermedio(Request $request) {
+        
         $validate = $this->validate($request, [
             'titulo'        => 'required',
             'destino'       => 'required',

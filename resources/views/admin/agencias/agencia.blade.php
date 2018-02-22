@@ -2,7 +2,7 @@
 @section('title','Detalles agencia | Enviar recordatorio')
 @section('agencias','class="active"')
 @section('content')
-	<div class="conteiner">
+	<div class="container">
         <div class="row">
             <div class="col-md-12 col-xs-12">
                 <h2 class="lato-300 text-center blue">Detalles agencia {{ $agencia->nombre_agencia }}</h2>

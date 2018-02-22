@@ -25,7 +25,8 @@ class XmlConector
 		if(App::environment('local')){
 			   	$wsdl = Config::get('constants.DEVELOPMENT_WSDL');
 		    }else{
-		    	// hay que borrar la primera linea y descomentar la segunda
+		    	// hay que borrar la primera linea y descomentar la segunda 
+		    	// para poner en produccion
 		    	$wsdl = Config::get('constants.DEVELOPMENT_WSDL');
 			    //$wsdl = Config::get('constants.PRODUCTION_WSDL');
 		}	

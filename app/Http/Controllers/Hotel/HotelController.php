@@ -102,6 +102,7 @@ class HotelController extends Controller
         *  flasheamos los datos de la primera busqueda
         */
         Input::flashExcept('zona');
+
         $destinos = $this->destinos->lists('NombreDestino','IdDestino')->sort();
         $zonas = $this->zonas->lists('NombreZona','IdZona');
         $idZonas = $this->zonas->all();
@@ -154,11 +155,16 @@ class HotelController extends Controller
             }
             $param .= ' </PARAMETERS>'; // fin parametros
 
-            //dd($param);                        // debug
+            // decomentar para ver los parametros
+            //dd($param);
             $xml->parametros = $param;
+
+            // decomentar para ver $xml->parametros
             //dd($xml->parametros);
-            $hotel = new xmlParser($xml->getString()); 
-            // dd($hotel);                      // debug
+            $hotel = new xmlParser($xml->getString());
+
+            // decomentar para ver la respuesta
+            // dd($hotel);                     
 
             // procentaje agencia sobre el precio del hotel          
             $procent = $this->procentajes->first();
@@ -171,7 +177,7 @@ class HotelController extends Controller
             if ($hotel->hasError()){
                 return view('hotel.search_error',compact('hotel'));
             } else {
-                // make view
+                // construimos el view
                 return view('hotel.result',compact('hotel','procent','destinos',
                                       'zonas','idZonas','bookingParameters'));
             }            
