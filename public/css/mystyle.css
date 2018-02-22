@@ -209,6 +209,15 @@ li.active {
 	border: 1px solid #c0c0c0;
 	border-top: 0px;
 }
+.services-container {
+	width: 100%;
+	background-color: #1b4e9d;
+	margin: 20px 0;
+	padding: 30px;
+}
+.services-container h4 {
+	color: #fafafa;
+}
 /**************** CAROUSEL ***********************/
 .carousel-caption {
 	background-color: rgba(97,99,102, 0.70);

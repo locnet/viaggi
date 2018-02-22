@@ -24,19 +24,25 @@
                 <h1 class="lato-300 dark-grey text-center">Conocenos</h1>
             </div>
             <div class="col-md-4 col-xs-12">
-                <h4 class="roboto-400 text-center dark-blue">Como trabajamos</h4>
+                <div class="services-container">
+                    <h4 class="roboto-400 text-center">Como trabajamos</h4>
+                </div>
                 <p class="roboto-700">Vender nuestros tours de Andalucia no es lo que mas nos importa, lo que de 
                 verdad nos importa es consequir que tus clientes repitan contigo, ergo, tu repitas 
                 con nosotros. </p>
             </div>
             <div class="col-md-4 col-xs-12">
-                <h4 class="roboto-400 text-center dark-blue">Precios</h4>
+                <div class="services-container">
+                    <h4 class="roboto-400 text-center dark-blue">Precios</h4>
+                </div>
                 <p class="roboto-700">Hacemos lo imposible para consequir los mejores 
                     precios en alojamientos, transportes y comida para tus clientes. ¿Te han ofrecido mejor 
                     precio en otra parte? No pasa nada, tomamos una cerveza y tan amigos .</p>
             </div>
             <div class="col-md-4 col-xs-12">
-                <h4 class="roboto-400 text-center dark-blue">Claro como el agua</h4>
+                <div class="services-container">
+                    <h4 class="roboto-400 text-center dark-blue">Claro como el agua</h4>
+                </div>
                 <p class="roboto-700">¿Te gustan las cosas claras? Tambien a nosostros. Antes de pagar 
                     nada sabras en que has invertido el dinero, sin letra pequeña. Te detallaremos el 
                     tour elegido paso a paso, para que no haya ninguna duda.</p> 
